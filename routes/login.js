@@ -20,25 +20,30 @@ router.post('/', (req, res, next) => {
     emailForm = body.email;
    passwordForm   = body.password;
 
- 
-   
-   router.get('/', function(req, res) {
     
-    sqlconnect.query(`SELECT * FROM usuarios WHERE email = ${emailForm} AND password = ${passwordForm}'`
+    console.log(`SELECT * FROM usuarios WHERE email = '${emailForm}' AND password = '${passwordForm}'`);
+   
+    console.log("prueba");
+    sqlconnect.query(`SELECT * FROM usuarios WHERE email = '${emailForm}' AND password = '${passwordForm}'`
     ,(error, result) => {
-       console.log(result);
+       
         if (error) {
             console.error(error);
-            return res.render({ message: 'Error inesperado'});
+            return;
         }
         if(result.length>0){
-           return res.render('login.hbs', { message: 'El usuario se ha logeado exitosamente', data:result });
-            
+            res.render('login_success', { message: 'El usuario se ha logeado exitosamente', data:result[0] });
+            console.log(result);
+            return;
+        
         }
-        return res.render('login.hbs', { message: 'Usuario o contraseña incorrectos. Vuelva a intentar'});
+         res.render('login.hbs', { message: 'Usuario o contraseña incorrectos. Vuelva a intentar'});
+         console.log('no entre');
+         return;
+         
             
     });
- })
+
 
 });  
 

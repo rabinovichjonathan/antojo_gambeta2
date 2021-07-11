@@ -45,61 +45,28 @@
         <div id="contenedor">
          
           <ul class="productos_destacados">
-            <li class="producto">
-              <a href="producto_detalle.html"><img src="imagenes/canastitas2.jpeg"></a>
-              <div class="contenedor_producto_destacado">
-               {{#each products }}
-                <div class="tituloProducto">
-                  {{producto}}
-                </div>
-                {{/each}}
-                <div class="unidades">
-                  X12 unidades. 350$
-                </div>
-                <div class="descripcionProducto">
-                  Magnificas canastitas hechas con productos 100% orgánicos.
-                </div>   
-               <div class="botonComprar">
-                 <button type="button" class="btn btn-danger">Comprar!</button>
-               </div>
-              </div>   
-               
-            </li>
-            <li class="producto">
-              <a href="producto_detalle.html"><img src="imagenes/canastitas2.jpeg"></a>
-              <div class="contenedor_producto_destacado">
-                <div class="tituloProducto">
-                  Canastitas  
-                </div>   
-                <div class="unidades">
-                  X12 unidades. 350$
-                </div>
-                <div class="descripcionProducto">
-                  Magnificas canastitas hechas con productos 100% orgánicos.
-                </div>  
+            {{#each products }}
+              <li class="producto">
+                <a href="producto_detalle?producto_id={{producto_id}}"><img src="imagenes/{{foto_producto}}"></a>
+                <div class="contenedor_producto_destacado">
                 
-               <div class="botonComprar">
-                 <button type="button" class="btn btn-danger">Comprar!</button>
-               </div>  
-              </div>   
-            </li>
-            <li class="producto">
-              <a href="producto_detalle.html"><img src="imagenes/canastitas2.jpeg"></a>
-              <div class="contenedor_producto_destacado">
-                <div class="tituloProducto">
-                   Canastitas
-                </div>
-                <div class="unidades">
-                  X12 unidades. 350$
-                </div>  
-                <div class="descripcionProducto">
-                  Magnificas canastitas hechas con productos 100% orgánicos.
-                </div>   
+                  <div class="tituloProducto">
+                    {{producto}}
+                  </div>
+                  
+                  <div class="unidades">
+                    X{{cantidad_unidades}} unidad/es. {{precio}} $
+                  </div>
+                  <div class="descripcionProducto">
+                    {{descripcion}}
+                  </div>   
                 <div class="botonComprar">
                   <button type="button" class="btn btn-danger">Comprar!</button>
-                </div>  
-              </div>  
-            </li>
+                </div>
+                </div>   
+                
+              </li>
+            {{/each}}
             
           </ul>
         </div>

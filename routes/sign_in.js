@@ -2,10 +2,10 @@ var express = require('express');
 var router = express.Router();
 const sqlconnect = require('../utils/connection');
 
-router.get('/sign_in', (req, res) => {
+router.get('/', (req, res) => {
   res.render('sign_in.hbs');
 });
-router.post('/create-user', (req, res) => {
+router.post('/', (req, res) => {
   const persona = req.body;
   if (!persona.nombre) {
     return res.render('error');
@@ -20,7 +20,7 @@ router.post('/create-user', (req, res) => {
         return res.render('error');
       }
       console.log(result);
-      res.render('success', { nombre: persona.nombre, result });
+      res.render('success_sign_in', { nombre: persona.nombre});
     }
   );
 });

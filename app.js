@@ -13,6 +13,8 @@ const contactRouter = require('./routes/contact');
 const productsRouter = require('./routes/products');
 const loginRouter = require('./routes/login');
 const sign_inRouter = require('./routes/sign_in');
+const sobre_nosotrosRouter = require('./routes/sobre_nosotros');
+const producto_detalleRouter = require('./routes/producto_detalle');
 
 const app = express();
 require('dotenv').config();
@@ -42,7 +44,8 @@ app.use('/contact', contactRouter);
 app.use('/products', productsRouter);
 app.use('/login', loginRouter);
 app.use('/sign_in', sign_inRouter);
-
+app.use('/sobre_nosotros', sobre_nosotrosRouter);
+app.use('/producto_detalle', producto_detalleRouter);
 
 
 // catch 404 and forward to error handler

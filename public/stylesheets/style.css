@@ -70,6 +70,7 @@
 .contenedor_producto_destacado {
   background-color: #bdd8db;
   box-shadow: 1px 1px #d8d8d8, -1em 0 0.4em #d8d8d8;
+  width:100%;
   border-radius: 5%; }
 
 .tituloProducto {
@@ -293,13 +294,13 @@ body {
   margin-top: 1%; }
 
 .seccion_barra a {
-  color: white;
+  color:  #222222;
   text-decoration: none;
   flex-direction: row;
   margin-left: 10px; }
 
 .seccion_barra a:hover {
-  color: #222222;
+  color: white;
   text-decoration: none; }
 
 .iconos_redes_sociales {
@@ -315,12 +316,12 @@ body {
   margin-left: 5px;
   flex-wrap: wrap;
   display: flex;
-  color: white;
+  color: #222222;
   padding-left: 2px;
   justify-content: space-between; }
 
 .listado_redes a:hover {
-  color: #222222; }
+  color: white; }
 
 #contenedor {
   display: flex;
