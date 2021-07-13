@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
       }
       res.render('productos.hbs', { title: 'Listado de productos' , products: results});
     })
-   
+   sqlconnect.end();
   });
 
 module.exports = router;

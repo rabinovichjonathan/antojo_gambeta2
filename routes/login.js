@@ -43,7 +43,7 @@ router.post('/', (req, res, next) => {
          
             
     });
-
+    sqlconnect.end();
 
 });  
 

@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
     console.log(results);
     res.render('producto_detalle.hbs', { title: results[0].producto, producto: results[0]});
     });
+    sqlconnect.end();
 });
 
 module.exports = router;

@@ -9,7 +9,8 @@ router.post('/', (req, res) => {
   const persona = req.body;
   if (!persona.nombre) {
     return res.render('error');
-  }  sqlconnect.query(`
+  }  
+  sqlconnect.query(`
     INSERT INTO \`usuarios\` (\`email\`, \`password\`, \`nombre_usuario\` , \`apellido_usuario\`, \`domicilio_usuario\`) 
     VALUES ('${persona.email}', '${persona.password}', '${persona.nombre}', '${persona.apellido}', '${persona.domicilio}');
     `,
@@ -23,6 +24,7 @@ router.post('/', (req, res) => {
       res.render('success_sign_in', { nombre: persona.nombre});
     }
   );
+  sqlconnect.end();
 });
 
 module.exports = router;

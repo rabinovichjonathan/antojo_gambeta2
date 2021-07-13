@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
     }
     res.render('index', { title: 'Antojo y Gambeta web' , products: results});
   })
- 
+  sqlconnect.end();
 });
 
 module.exports = router;
