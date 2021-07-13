@@ -2,16 +2,20 @@
 const mysqlconfig = require('../config/config');
 
 const mysql = require('mysql2');
-
+/*
 const connection = mysql.createConnection(mysqlconfig);
-  connection.connect((error) =>{
+connection.connect((error) =>{
     if(error){
-      console.error(error);
-      process.exit()
+        console.error(error);
+        process.exit()
     }else{
-      console.log('base de datos conectada correctamente');
+        console.log('base de datos conectada correctamente');
     }
-  });
+});
 
-  module.exports = connection;
-  
+module.exports = connection;
+*/
+
+
+const pool = mysql.createPool(mysqlconfig);
+module.exports.pool = pool;
