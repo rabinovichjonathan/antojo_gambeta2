@@ -13,8 +13,8 @@ router.get('/', function(req, res, next) {
       res.render('error');
     }
     res.render('index', { title: 'Antojo y Gambeta web' , products: results});
+    sqlconnect.end();
   })
-  sqlconnect.end();
 });
 
 module.exports = router;
