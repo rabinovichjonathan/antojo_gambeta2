@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const sqlconnect = require('../utils/connection');
+const sqlconnect = require('../utils/connection').pool;
 
 router.get('/', (req, res) => {
   res.render('sign_in.hbs');
@@ -24,7 +24,6 @@ router.post('/', (req, res) => {
       res.render('success_sign_in', { nombre: persona.nombre});
     }
   );
-  sqlconnect.end();
 });
 
 module.exports = router;

@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const sqlconnect = require('../utils/connection');
+const sqlconnect = require('../utils/connection').pool;
 
 
 
@@ -43,7 +43,6 @@ router.post('/', (req, res, next) => {
          
             
     });
-    sqlconnect.end();
 
 });  
 
