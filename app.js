@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 /*configurar el motor de vistas*/
+/*prueba*/
 const hbs = require('express-handlebars');
 
 const indexRouter = require('./routes/index');
