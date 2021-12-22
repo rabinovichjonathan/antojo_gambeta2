@@ -65,7 +65,8 @@
   height: 100%;
   display: flex;
   box-shadow: 1px 1px #d8d8d8, -1em 0 0.4em #d8d8d8;
-  border-radius: 2%; }
+  border-radius: 2%; 
+}
 
 .contenedor_producto_destacado {
   background-color: #bdd8db;
@@ -357,3 +358,116 @@ body {
   flex-wrap: wrap;
   color: #bdd8db;
   width: 30%; }
+
+  .contenedor_gral_comprar{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:100%;
+    height:100%;
+  } 
+  .contenedor_listado_productos_comprar{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 3%;
+    width:60%;
+    height: 40%;
+    align-items: flex-start;
+    
+  }   
+ 
+ /*
+.imagen_producto_comprar{
+  display:flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+  justify-content: flex-start;
+   
+}
+*/
+ .imagen_producto_comprar img{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+   
+  width: 20%;
+   
+  border-radius: 10%; 
+  
+ }
+ 
+ .contenedor_titulo_copete_precio_botton{
+   display: flex;
+  
+   flex-direction: row;
+  flex-wrap: wrap;
+   width:60%;
+  margin-top: -15%;
+  margin-left: 32%;
+   
+   
+   
+ }   
+    
+    
+
+
+  .titulo_producto_comprar{
+    color: #dc3545;
+    font-weight: bold;
+    font-size: large;
+    margin-top:auto;
+   
+    
+    
+    
+   
+  }
+ 
+  .copete_producto_comprar{
+   
+    margin-top: 2%;
+   
+  
+    
+  }
+  .precio_producto{
+    color: #dc3545;
+    font-weight: bold;
+    margin-left: auto;
+    margin-top: 2%;
+    
+    
+  }
+
+  .contenedor_carrito{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+   margin-left: 5%;
+    background-color: #bdd8db;
+    width:30%;
+    height:40%;
+    border-radius: 2%;
+  }
+.titulo_mis_productos{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width:100%;
+  font-weight: bold;
+  margin-left: 35%;
+  margin-top: 2%;
+} 
+.total_carrito{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-left: 2%;
+}
+.precio_carrito{
+  margin-left:auto ;
+} 
+  
