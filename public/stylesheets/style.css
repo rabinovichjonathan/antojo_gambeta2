@@ -428,7 +428,7 @@ body {
   .copete_producto_comprar{
    
     margin-top: 2%;
-   
+    width: 90%;
   
     
   }
@@ -437,6 +437,9 @@ body {
     font-weight: bold;
     margin-left: auto;
     margin-top: 2%;
+    font-size: 12px;
+    
+    
     
     
   }

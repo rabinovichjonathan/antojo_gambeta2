@@ -47,7 +47,11 @@
           <ul class="productos_destacados">
             {{#each products }}
               <li class="producto">
+              {{#if foto_producto}}  
                 <a href="producto_detalle?producto_id={{producto_id}}"><img src="imagenes/{{foto_producto}}"></a>
+              {{^}}
+                <a href="producto_detalle?producto_id={{producto_id}}"><img src="imagenes/logo_antojo_gambeta2.jpeg"></a>
+              {{/if}}
                 <div class="contenedor_producto_destacado">
                 
                   <div class="tituloProducto">
@@ -61,7 +65,7 @@
                     {{descripcion}}
                   </div>   
                 <div class="botonComprar">
-                  <button type="button" class="btn btn-danger">Comprar!</button>
+                  <a href="/comprar"><button type="button" class="btn btn-danger">Comprar!</button></a>
                 </div>
                 </div>   
                 

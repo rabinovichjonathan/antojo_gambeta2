@@ -1,12 +1,16 @@
+
+
 var express = require('express');
 var router = express.Router();
 const sqlconnect = require('../utils/connection').pool;
+// GET contact listing. 
 
-/* GET contact listing. */
 router.get('/', function(req, res, next) {
-    sqlconnect.query(`SELECT * FROM productos WHERE destacado ='1' LIMIT 6`, function (err, results){
+    sqlconnect.query(`SELECT * FROM productos`, function (err, results){
       /*console.log(results);*/
-      if(err){
+      
+  
+     if(err){
        
         console.error(err);
         res.render('error');

@@ -4,39 +4,33 @@
         </div>
        <hr>
        <div class="contenedor_gral_comprar">
+        
         <div class="contenedor_listado_productos_comprar">
+             {{#each products }} 
               <div class="imagen_producto_comprar">
-                <img src="./imagenes/canastita1.jpeg">
+                {{#if foto_producto}}  
+                  <a href="producto_detalle?producto_id={{producto_id}}"><img src="imagenes/{{foto_producto}}"></a>
+              {{^}}
+                  <a href="producto_detalle?producto_id={{producto_id}}"><img src="imagenes/logo_antojo_gambeta.jpeg"></a>
+              {{/if}}
+               
               </div>
               <div class="contenedor_titulo_copete_precio_botton">
                 <div class="titulo_producto_comprar">
-                  Canastitas de zapallo
+                  {{producto}}
                 </div>
                 <div class="copete_producto_comprar">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  {{descripcion}}
                 </div>
-                <div class="precio_producto">$ 700</div>
+                <div class="precio_producto">${{precio}}</div>
                 <label style="font-size: 12px; margin-top:4%;"for="unidades">Cantidad de unidades:</label><br>
                 <input style="width:10%; height:5%; margin-top:3%; margin-left:2%;" type="number" name="unidades">
                 <button type="button" class="btn btn-danger" style="margin-left: auto; margin-top:3%;">Agregar</button>
               </div>
+              
               <hr style="width:100%;">
-              <div class="imagen_producto_comprar">
-                <img src="./imagenes/canastita1.jpeg">
-              </div>
-              <div class="contenedor_titulo_copete_precio_botton">
-                <div class="titulo_producto_comprar">
-                  Canastitas de berenjena
-                </div>
-                <div class="copete_producto_comprar">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </div>
-                <div class="precio_producto">$ 700</div>
-                <label style="font-size: 12px; margin-top:4%;"for="unidades">Cantidad de unidades:</label><br>
-                <input style="width:10%; height:5%; margin-top:3%; margin-left:2%;" type="number" name="unidades">
-                <button type="button" class="btn btn-danger" style="margin-left: auto; margin-top:3%;">Agregar</button>
-              </div>
-          <hr style="width:100%;">
+              {{/each}}
+           
         </div>
         
             
@@ -82,7 +76,7 @@
       </div>  
       
         
-        <div class="pedinos">
+        <div class="pedinos" style="margin-top: 40%;">
           Hacé tu pedido teléfonicamente, por whatsapp o a través de nuestra web. Entregas por delivery hacia todo CABA.
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bicycle" viewBox="0 0 16 16">
             <path d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5zm1.5 2.443-.508.814c.5.444.85 1.054.967 1.743h1.139L5.5 6.943zM8 9.057 9.598 6.5H6.402L8 9.057zM4.937 9.5a1.997 1.997 0 0 0-.487-.877l-.548.877h1.035zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765l1.027-1.643zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53L11.55 8.623z"/>

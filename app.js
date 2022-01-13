@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const cors = require('cors');
 
 /*configurar el motor de vistas*/
 /*prueba*/
@@ -17,6 +18,7 @@ const sign_inRouter = require('./routes/sign_in');
 const sobre_nosotrosRouter = require('./routes/sobre_nosotros');
 const producto_detalleRouter = require('./routes/producto_detalle');
 const comprarRouter = require('./routes/comprar');
+
 
 const app = express();
 require('dotenv').config();
@@ -36,6 +38,7 @@ app.engine('hbs', hbs({
 
 app.use(logger('dev'));
 app.use(express.json());
+app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
